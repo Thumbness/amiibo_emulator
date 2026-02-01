@@ -1,0 +1,14 @@
+# Requirements for Amiibo Emulator - Raspberry Pi Version
+# Install with: pip3 install -r requirements_rpi.txt
+
+# GPIO and Hardware Control
+RPi.GPIO>=0.7.1
+
+# SPI Communication for PN532
+spidev>=3.6
+
+# I2C Communication for LCD
+smbus2>=0.4.2
+
+# Additional dependencies (already in original code)
+# These should already be available in standard Python installations

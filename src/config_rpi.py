@@ -8,38 +8,16 @@ Contains all configuration constants and settings for Raspberry Pi.
 class HardwareConfig:
     """Hardware pin and address configuration for Raspberry Pi"""
     
-    # I2C Configuration (for LCD)
+    # I2C Configuration 
     I2C_BUS = 1  # I2C bus number (usually 1 on Raspberry Pi)
     I2C_FREQUENCY = 100000  # 100kHz
-    
-    # PN532 SPI Configuration
-    SPI_BUS = 0  # SPI bus number
-    SPI_DEVICE = 0  # SPI device (CE0)
-    SPI_MAX_SPEED = 1000000  # 1MHz
     
     # PN532 GPIO Pins (BCM numbering)
     PN532_IRQ_PIN = 16  # GPIO24 for interrupt
     PN532_RST_PIN = 17  # GPIO25 for reset
-    
-    # LCD Configuration
-    LCD_I2C_ADDRESS = 0x27  # Common address, may vary (try 0x3F if 0x27 doesn't work)
-    LCD_ROWS = 2
-    LCD_COLS = 16
-    
-    # Button Configuration (BCM numbering)
-    BUTTON_UP_PIN = 22      # GPIO17
-    BUTTON_DOWN_PIN = 27    # GPIO27
-    BUTTON_SELECT_PIN = 5  # GPIO22
-    BUTTON_TRANSMIT_PIN = 6  # GPIO23
-    
-    # Button mapping for UI Controller
-    BUTTON_PINS = {
-        'up': BUTTON_UP_PIN,
-        'down': BUTTON_DOWN_PIN,
-        'select': BUTTON_SELECT_PIN,
-        'transmit': BUTTON_TRANSMIT_PIN
-    }
+    PN532_I2C_ADDRESS = 0x24  # Default I2C address for PN532
 
+    
 # Application Configuration
 class AppConfig:
     """Application behavior configuration"""

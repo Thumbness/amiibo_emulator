@@ -21,7 +21,7 @@ class AmiiboServer:
         self.running = False
         self.server_socket = None
         
-        # Initialize components (no LCD!)
+        # Initialize components
         print("Initializing headless Amiibo server...")
         self.file_manager = FileManager()
         self.nfc_writer = AmiiboWriter(i2c_bus=1)
